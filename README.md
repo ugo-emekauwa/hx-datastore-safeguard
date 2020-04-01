@@ -12,8 +12,8 @@ This script is intended for use on Cisco HyperFlex systems in demonstration or t
 
 ## Getting Started:
 1. Please ensure that the above prerequisites have been met.
-2. Download the **hx_safeguard.py** file from this repository here on GitHub.
-3. Open the **hx_safeguard.py** file in an IDE or text editor.
+2. Download the **hx_datastore_safeguard.py** file from this repository here on GitHub.
+3. Open the **hx_datastore_safeguard.py** file in an IDE or text editor.
 4. Go to the comment section named **Required Variables**, as shown below:
     ```python
     ######################
@@ -47,7 +47,7 @@ This script is intended for use on Cisco HyperFlex systems in demonstration or t
     - `"Size"` - The datastore capacity size provided as an integer value.
     - `"SizeUnit"` - The datastore capacity size unit provided as a string value.
     - `"BlockSize"` - The datastore block size provided as an integer value.
-9. Save the **hx_safeguard.py** file. The file is now ready for use.
+9. Save the **hx_datastore_safeguard.py** file. The file is now ready for use.
 
 
 ## Author:
