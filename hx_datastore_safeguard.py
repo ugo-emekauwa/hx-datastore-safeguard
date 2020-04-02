@@ -214,8 +214,8 @@ try:
                                 print("{}\n".format(str(new_hx_datastore.json())))
                         else:
                             print("There was an error deleting {}.".format(hx_safeguarded_datastore["Name"].strip()))
-                            print("Status Code: {}".format(str(new_hx_datastore.status_code)))
-                            print("{}\n".format(str(new_hx_datastore.json())))
+                            print("Status Code: {}".format(str(delete_hx_datastore.status_code)))
+                            print("{}\n".format(str(delete_hx_datastore.json())))
                     else:
                         print("The current data block size for {} matches the safeguarded requirements.".format(hx_safeguarded_datastore["Name"].strip()))
                     break
