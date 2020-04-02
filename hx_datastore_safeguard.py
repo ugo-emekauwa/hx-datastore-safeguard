@@ -131,7 +131,7 @@ try:
     print("Verifying that the HyperFlex Datastore Safeguard list requirements are met...")
     if hx_datastore_safeguard_list:
         for index, hx_safeguarded_datastore in enumerate(hx_datastore_safeguard_list):
-            if len(hx_safeguarded_datastore["Name"].strip()) is 0:
+            if len(hx_safeguarded_datastore["Name"].strip()) == 0:
                 print("\nThere is an issue with the dictionary entry for the datastore at index {} in the HyperFlex Safeguard Datastore list!".format(index))
                 print("The provided name is empty and not an accepted value for the 'Name' dictionary key.".format(index))
                 print("The following dictionary entry needs to be repaired: {}.".format(hx_safeguarded_datastore))
