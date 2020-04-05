@@ -10,7 +10,7 @@ This script is intended for use on Cisco HyperFlex systems in demonstration or t
     ```
     git clone https://github.com/ugo-emekauwa/hx-datastore-safeguard
     ```
-3. Install the required Python modules requests and urllib3. The requirements.txt file in the repository can be used by running the following command:
+3. Install the required Python modules ***requests*** and ***urllib3***. The requirements.txt file in the repository can be used by running the following command:
     ```
     python -m pip install -r requirements.txt
     ```
@@ -53,8 +53,13 @@ This script is intended for use on Cisco HyperFlex systems in demonstration or t
     As shown in the preceding examples above, the dictionary for each datastore needs the following keys with values in the specified format:
     - `"Name"` - The datastore name provided as a string value.
     - `"Size"` - The datastore capacity size provided as an integer value.
-    - `"SizeUnit"` - The datastore capacity size unit provided as a string value.
-    - `"BlockSize"` - The datastore block size provided as an integer value.
+    - `"SizeUnit"` - The datastore capacity size unit provided as a string value. The accepted values are:
+        - "TB" for terabytes.
+        - "GB" for gigabytes.
+        - "B" for bytes.
+    - `"BlockSize"` - The datastore block size provided as an integer value. The accepted values are:
+        - 8192
+        - 4096   
 9. Save the **hx_datastore_safeguard.py** file. The file is now ready for use.
 
 
