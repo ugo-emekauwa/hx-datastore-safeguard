@@ -6,7 +6,7 @@ This script is intended for use on Cisco HyperFlex systems in demonstration or t
 
 ## Prerequisites:
 1. Python 3 installed, which can be downloaded from [https://www.python.org/downloads/](https://www.python.org/downloads/).
-2. Clone or download the Cisco HyperFlex Datastore Safeguard repository using the ![Gitub Clone or download](./assets/Github_Clone_or_download_link_button.png "Github Clone or download") link on the main repository web page or run the following command:
+2. Clone or download the Cisco HyperFlex Datastore Safeguard repository by using the ![Gitub Clone or download](./assets/Github_Clone_or_download_link_button.png "Github Clone or download") link on the main repository web page or run the following command:
     ```
     git clone https://github.com/ugo-emekauwa/hx-datastore-safeguard
     ```
