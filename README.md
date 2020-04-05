@@ -6,9 +6,17 @@ This script is intended for use on Cisco HyperFlex systems in demonstration or t
 
 ## Prerequisites:
 1. Python 3 installed, which can be downloaded from [https://www.python.org/downloads/](https://www.python.org/downloads/).
-2. The IP address of the targeted Cisco HyperFlex system.
-3. User credentials with administrative rights on the targeted Cisco HyperFlex system.
-4. The name, capacity size and block size of any datastores on the targeted Cisco HyperFlex system that need the configuration safeguarded.
+2. Clone or download the Cisco HyperFlex Datastore Safeguard repository using the ![Gitub Clone or download](./assets/Github_Clone_or_download_link_button.png "Github Clone or download") link at [https://github.com/ugo-emekauwa/hx-datastore-cleanup](https://github.com/ugo-emekauwa/hx-datastore-cleanup) or run the following command:
+    ```
+    git clone https://github.com/ugo-emekauwa/hx-datastore-safeguard
+    ```
+3. Install the required Python modules requests and urllib3. The requirements.txt file in the repository can be used by running the following command:
+    ```
+    python -m pip install -r requirements.txt
+    ```
+4. The IP address of the targeted Cisco HyperFlex system.
+5. User credentials with administrative rights on the targeted Cisco HyperFlex system.
+6. The name, capacity size and block size of any datastores on the targeted Cisco HyperFlex system that need the configuration safeguarded.
 
 ## Getting Started:
 1. Please ensure that the above prerequisites have been met.
