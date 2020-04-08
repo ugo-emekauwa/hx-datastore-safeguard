@@ -103,7 +103,7 @@ try:
                     hx_datastore_size = hx_datastore["dsconfig"]["provisionedCapacity"] / 1073741824
                     hx_datastore_size_unit = "GB"
                 hx_datastore_creation_time = datetime.fromtimestamp(int(hx_datastore["creationTime"])).strftime("%I:%M:%S %p on %A, %B %d, %Y")
-                print("    {}. {} with a provisioned size of {} {} and a creation time of {}.".format(index, hx_datastore["dsconfig"]["name"], hx_datastore_size, hx_datastore_size_unit, hx_datastore_creation_time))
+                print("    {}. {} with a provisioned size of {} {} and a creation time of {}. The block size is {}.".format(index, hx_datastore["dsconfig"]["name"], hx_datastore_size, hx_datastore_size_unit, hx_datastore_creation_time, hx_datastore["dsconfig"]["dataBlockSize"]))
             print("\n")
     else:
         print("There was an error obtaining the list of configured HyperFlex datastores: ")
