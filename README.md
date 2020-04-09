@@ -1,12 +1,12 @@
 # Cisco HyperFlex Datastore Safeguard
 
-The HyperFlex Datastore Safeguard Script for Cisco HyperFlex utilizes the HyperFlex API to automatically restore a targeted datastore's configuration if it is modified or deleted. If a specified datastore is deleted, it will be replaced. If a specified datastore's provisoned capacity size or block size is changed, the settings will be changed back to the original configuration.
+The HyperFlex Datastore Safeguard Script for Cisco HyperFlex utilizes the HyperFlex API to automatically restore a targeted datastore's configuration if it is modified or deleted. If a specified datastore is deleted, it will be replaced. If a specified datastore's provisioned capacity size or block size is changed, the settings will be changed back to the original configuration.
 
 This script is intended for use on Cisco HyperFlex systems in demonstration or training environments. Do not use on production systems.
 
 ## Prerequisites:
 1. Python 3 installed, which can be downloaded from [https://www.python.org/downloads/](https://www.python.org/downloads/).
-2. Clone or download the Cisco HyperFlex Datastore Safeguard repository by using the ![Gitub Clone or download](./assets/Github_Clone_or_download_link_button.png "Github Clone or download") link on the main repository web page or by running the following command:
+2. Clone or download the Cisco HyperFlex Datastore Safeguard repository by using the ![GitHub Clone or download](./assets/Github_Clone_or_download_link_button.png "GitHub Clone or download") link on the main repository web page or by running the following command:
     ```
     git clone https://github.com/ugo-emekauwa/hx-datastore-safeguard
     ```
@@ -62,6 +62,46 @@ This script is intended for use on Cisco HyperFlex systems in demonstration or t
         - 4096   
 9. Save the **hx_datastore_safeguard.py** file. The file is now ready for use.
 
+## How to Use (w/ Examples):
+
+1. After fulfilling the requirements listed in the [**Prerequisites**](https://github.com/ugo-emekauwa/hx-datastore-safeguard#prerequisites) and [**Getting Started**](https://github.com/ugo-emekauwa/hx-datastore-safeguard#getting-started) sections, run the **hx_datastore_safeguard.py** script directly from your IDE or from the command line e.g.:
+    ```
+    python hx_datastore_safeguard.py
+    ```
+2. Here is an example of the output from the **hx_datastore_safeguard.py** script if no safeguarded datastores have been set yet in the script.
+
+    ![No Safeguarded Datastores](./assets/No_Safeguarded_Datastores.png "No Safeguarded Datastores")
+
+    The available datastores on the targeted HyperFlex cluster are listed with information regarding the size, creation time and block size. None of the datastores have been safeguarded yet in the script.
+
+3. Here is an example of the output from the **hx_datastore_safeguard.py** script after safeguarding datastore1 and datastore2 in the script and the current configuration of the datastores on the targeted HyperFlex cluster do not match the safeguard settings. Datastore1 has been safeguarded with settings that enforce 500 GB and a block size of 8192. Datastore2 has been safeguarded with settings that enforce 7 TB and a block size of 8192.
+
+    ![Safeguarded Datastores Added, Settings Mismatch](./assets/Safeguarded_Datastores_Added_Settings_Mismatch.png "Safeguarded Datastores Added, Settings Mismatch")
+
+    After the available datastores on the targeted HyperFlex cluster are listed, the configuration of datastore1 and datastore2 are updated to match the safeguarded settings of 500 GB and 7 TB respectively.
+Safeguarding datastore1 and datastore2 with the settings above is done with the following entries in hx_datastore_safeguard_list:
+    ```python
+    hx_datastore_safeguard_list = ({"Name": "datastore1", "Size": 500, "SizeUnit": "GB", "BlockSize": 8192}, 
+                                   {"Name": "datastore2", "Size": 7, "SizeUnit": "TB", "BlockSize": 8192})
+    ```
+
+    If the **hx_datastore_safeguard.py** script is executed again after the safeguarded datastores have been corrected, no changes are made as shown below.
+
+    ![Safeguarded Datastores Added, Settings Now Match](./assets/Safeguarded_Datastores_Added_Settings_Now_Match.png "Safeguarded Datastores Added, Settings Now Match")
+
+4. Here is an example of the output from the **hx_datastore_safeguard.py** script if safeguarded datastores in the script are missing from the targeted HyperFlex cluster.
+
+    ![Missing Safeguarded Datastores](./assets/Missing_Safeguarded_Datastores.png "Missing Safeguarded Datastores")
+
+    Safeguarding datastore3 and datastore4 with the settings above is done with the following entries in hx_datastore_safeguard_list:
+    ```python
+    hx_datastore_safeguard_list = ({"Name": "datastore3", "Size": 10, "SizeUnit": "TB", "BlockSize": 8192}, 
+                                   {"Name": "datastore4", "Size": 25, "SizeUnit": "TB", "BlockSize": 8192})
+    ```
+
+    If the **hx_datastore_safeguard.py** script is executed again after the safeguarded datastores have been added, no changes are made as shown below.
+
+    ![Missing Safeguarded Datastores Added](./assets/Missing_Safeguarded_Datastores_Added.png "Missing Safeguarded Datastores Added")
 
 ## Author:
 Ugo Emekauwa
