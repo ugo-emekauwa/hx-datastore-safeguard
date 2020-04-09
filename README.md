@@ -72,7 +72,7 @@ This script is intended for use on Cisco HyperFlex systems in demonstration or t
 
     ![No Safeguarded Datastores](./assets/No_Safeguarded_Datastores.png "No Safeguarded Datastores")
 
-    The available datastores on the targeted HyperFlex cluster are listed with information regarding the size, creation time and block size. None of the datastores have been safeguarded yet in the script.
+    All of the available datastores on the targeted HyperFlex cluster are listed with information regarding the size, creation time and block size. None of the datastores have been safeguarded yet in the script.
 
 3. Here is an example of the output from the **hx_datastore_safeguard.py** script after safeguarding datastore1 and datastore2 in the script and the current configuration of the datastores on the targeted HyperFlex cluster do not match the safeguard settings. Datastore1 has been safeguarded with settings that enforce 500 GB and a block size of 8192. Datastore2 has been safeguarded with settings that enforce 7 TB and a block size of 8192.
 
