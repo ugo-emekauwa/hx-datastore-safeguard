@@ -78,8 +78,7 @@ This script is intended for use on Cisco HyperFlex systems in demonstration or t
 
     ![Safeguarded Datastores Added, Settings Mismatch](./assets/Safeguarded_Datastores_Added_Settings_Mismatch.png "Safeguarded Datastores Added, Settings Mismatch")
 
-    After the available datastores on the targeted HyperFlex cluster are listed, the configuration of datastore1 and datastore2 are updated to match the safeguarded settings of 500 GB and 7 TB respectively.
-Safeguarding datastore1 and datastore2 with the settings above is done with the following entries in hx_datastore_safeguard_list:
+    After the available datastores on the targeted HyperFlex cluster are listed, the configuration of datastore1 and datastore2 are updated to match the safeguarded settings of 500 GB and 7 TB respectively. Safeguarding datastore1 and datastore2 with the settings above is done with the following entries in hx_datastore_safeguard_list:
     ```python
     hx_datastore_safeguard_list = ({"Name": "datastore1", "Size": 500, "SizeUnit": "GB", "BlockSize": 8192}, 
                                    {"Name": "datastore2", "Size": 7, "SizeUnit": "TB", "BlockSize": 8192})
