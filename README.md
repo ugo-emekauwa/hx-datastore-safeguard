@@ -22,27 +22,26 @@ This tool is intended for use on Cisco HyperFlex systems in demonstration or tra
 
 ## Getting Started:
 1. Please ensure that the above prerequisites have been met.
-2. Download the **hx_datastore_safeguard.py** file from this repository here on GitHub.
-3. Open the **hx_datastore_safeguard.py** file in an IDE or text editor.
-4. Go to the comment section named **Required Variables**, as shown below:
+2. Open the **hx_datastore_safeguard.py** file in an IDE or text editor.
+3. Go to the comment section named **Required Variables**, as shown below:
     ```python
     ######################
     # Required Variables #
     ######################
     ```
-5. Set the value of the variable named `hx_admin` with the username of the credentials that will be used to access the targeted Cisco HyperFlex system. The value must be a string. For example, here is an entry the sets the username to **admin**:
+4. Set the value of the variable named `hx_admin` with the username of the credentials that will be used to access the targeted Cisco HyperFlex system. The value must be a string. For example, here is an entry the sets the username to **admin**:
     ```python
     hx_admin = "admin"
     ```
-6. Set the value of the variable named `hx_password` with the password of the credentials that will be used to access the targeted Cisco HyperFlex system. The value must be a string. For example, here is an entry that sets the password to **C1sco12345**:
+5. Set the value of the variable named `hx_password` with the password of the credentials that will be used to access the targeted Cisco HyperFlex system. The value must be a string. For example, here is an entry that sets the password to **C1sco12345**:
     ```python
     hx_password = "C1sco12345"
     ```
-7. Set the value of the variable named `hx_connect_ip` with the IP address of the targeted Cisco HyperFlex system. The value must be a string. For example, here is an entry that sets the IP address to **192.168.1.100**:
+6. Set the value of the variable named `hx_connect_ip` with the IP address of the targeted Cisco HyperFlex system. The value must be a string. For example, here is an entry that sets the IP address to **192.168.1.100**:
     ```python
     hx_connect_ip = "192.168.1.100"
     ```
-8. Set the value of the variable named `hx_datastore_safeguard_list` by providing one or more dictionaries with the name, capacity size, capacity size unit and block size of any datastores that need the configuration safeguarded.
+7. Set the value of the variable named `hx_datastore_safeguard_list` by providing one or more dictionaries with the name, capacity size, capacity size unit and block size of any datastores that need the configuration safeguarded.
     For example, here is a sample entry with one dictionary for a datastore named datastore1 that has a capacity size of 500 GB and a block size of 4096:
     ```python
     hx_datastore_safeguard_list = ({"Name": "datastore1", "Size": 500, "SizeUnit": "GB", "BlockSize": 4096})
@@ -62,7 +61,7 @@ This tool is intended for use on Cisco HyperFlex systems in demonstration or tra
     - `"BlockSize"` - The datastore block size provided as an integer value. The accepted values are:
         - 8192
         - 4096   
-9. Save the **hx_datastore_safeguard.py** file. The file is now ready for use.
+8. Save the **hx_datastore_safeguard.py** file. The file is now ready for use.
 
 ## How to Use (w/ Examples):
 
