@@ -29,7 +29,7 @@ This tool is intended for use on Cisco HyperFlex systems in demonstration or tra
     # Required Variables #
     ######################
     ```
-4. Set the value of the variable named `hx_admin` with the username of the credentials that will be used to access the targeted Cisco HyperFlex system. The value must be a string. For example, here is an entry the sets the username to **admin**:
+4. Set the value of the variable named `hx_admin` with the username of the credentials that will be used to access the targeted Cisco HyperFlex system. The value must be a string. For example, here is an entry that sets the username to **admin**:
     ```python
     hx_admin = "admin"
     ```
