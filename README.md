@@ -2,7 +2,7 @@
 
 [![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/ugo-emekauwa/hx-datastore-safeguard)
 
-Cisco HyperFlex Datastore Safeguard for Cisco HyperFlex utilizes the HyperFlex API to automatically restore a targeted datastore's configuration if it is modified or deleted. If a specified datastore is deleted, it will be replaced. If a specified datastore's provisioned capacity size or block size is changed, the settings will be changed back to the original configuration.
+Cisco HyperFlex Datastore Safeguard for Cisco HyperFlex utilizes the HyperFlex API to automatically restore datastore configurations if modified or deleted. If a specified datastore is deleted, it will be replaced. If a specified datastore's provisioned capacity size or block size is changed, the settings will be changed back to the original configuration.
 
 This tool is intended for use on Cisco HyperFlex systems in demonstration or training environments. Do not use on production systems.
 
