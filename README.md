@@ -66,17 +66,17 @@ This tool is intended for use on Cisco HyperFlex systems in demonstration or tra
 
 ## How to Use (w/ Examples):
 
-1. After fulfilling the requirements listed in the [**Prerequisites**](https://github.com/ugo-emekauwa/hx-datastore-safeguard#prerequisites) and [**Getting Started**](https://github.com/ugo-emekauwa/hx-datastore-safeguard#getting-started) sections, run the **hx_datastore_safeguard.py** script directly from your IDE or from the command line e.g.:
+1. After fulfilling the requirements listed in the [**Prerequisites**](https://github.com/ugo-emekauwa/hx-datastore-safeguard#prerequisites) and [**Getting Started**](https://github.com/ugo-emekauwa/hx-datastore-safeguard#getting-started) sections, run **hx_datastore_safeguard.py** directly from your IDE or from the command line e.g.:
     ```
     python hx_datastore_safeguard.py
     ```
-2. Here is an example of the output from the **hx_datastore_safeguard.py** script if no safeguarded datastores have been set yet in the script.
+2. Here is an example of the output from **hx_datastore_safeguard.py** if no safeguarded datastores have been set yet.
 
     ![No Safeguarded Datastores](./assets/No_Safeguarded_Datastores.png "No Safeguarded Datastores")
 
-    All of the available datastores on the targeted HyperFlex cluster are listed with information regarding the size, creation time and block size. None of the datastores have been safeguarded yet in the script.
+    All of the available datastores on the targeted HyperFlex cluster are listed with information regarding the size, creation time and block size. None of the datastores have been safeguarded yet.
 
-3. Here is an example of the output from the **hx_datastore_safeguard.py** script after safeguarding datastore1 and datastore2 in the script and the current configuration of the datastores on the targeted HyperFlex cluster do not match the safeguard settings. Datastore1 has been safeguarded with settings that enforce 500 GB and a block size of 8192. Datastore2 has been safeguarded with settings that enforce 7 TB and a block size of 8192.
+3. Here is an example of the output from **hx_datastore_safeguard.py** after safeguarding datastore1 and datastore2 in the file and the current configuration of the datastores on the targeted HyperFlex cluster do not match the safeguard settings. Datastore1 has been safeguarded with settings that enforce 500 GB and a block size of 8192. Datastore2 has been safeguarded with settings that enforce 7 TB and a block size of 8192.
 
     ![Safeguarded Datastores Added, Settings Mismatch](./assets/Safeguarded_Datastores_Added_Settings_Mismatch.png "Safeguarded Datastores Added, Settings Mismatch")
 
@@ -86,11 +86,11 @@ This tool is intended for use on Cisco HyperFlex systems in demonstration or tra
                                    {"Name": "datastore2", "Size": 7, "SizeUnit": "TB", "BlockSize": 8192})
     ```
 
-    If the **hx_datastore_safeguard.py** script is executed again after the safeguarded datastores have been corrected, no changes are made as shown below.
+    If **hx_datastore_safeguard.py** is executed again after the safeguarded datastores have been corrected, no changes are made as shown below.
 
     ![Safeguarded Datastores Added, Settings Now Match](./assets/Safeguarded_Datastores_Added_Settings_Now_Match.png "Safeguarded Datastores Added, Settings Now Match")
 
-4. Here is an example of the output from the **hx_datastore_safeguard.py** script if safeguarded datastores in the script are missing from the targeted HyperFlex cluster.
+4. Here is an example of the output from **hx_datastore_safeguard.py** if safeguarded datastores are missing from the targeted HyperFlex cluster.
 
     ![Missing Safeguarded Datastores](./assets/Missing_Safeguarded_Datastores.png "Missing Safeguarded Datastores")
 
@@ -100,7 +100,7 @@ This tool is intended for use on Cisco HyperFlex systems in demonstration or tra
                                    {"Name": "datastore4", "Size": 25, "SizeUnit": "TB", "BlockSize": 8192})
     ```
 
-    If the **hx_datastore_safeguard.py** script is executed again after the safeguarded datastores have been added, no changes are made as shown below.
+    If **hx_datastore_safeguard.py** is executed again after the safeguarded datastores have been added, no changes are made as shown below.
 
     ![Missing Safeguarded Datastores Added](./assets/Missing_Safeguarded_Datastores_Added.png "Missing Safeguarded Datastores Added")
 
