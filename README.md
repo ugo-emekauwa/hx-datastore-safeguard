@@ -104,7 +104,7 @@ This tool is intended for use on Cisco HyperFlex systems in demonstration or tra
     ![Missing Safeguarded Datastores Added](./assets/Missing_Safeguarded_Datastores_Added.png "Missing Safeguarded Datastores Added")
 
 ## Related Tools:
-###### Here are similar tools to help manage Cisco HyperFlex training, demonstration and development environments.
+Here are similar tools to help manage Cisco HyperFlex training, demonstration and development environments.
 - [Cisco HyperFlex Datastore Cleanup](https://github.com/ugo-emekauwa/hx-datastore-cleanup)
 - [HyperFlex Notification Tool for Cisco Intersight](https://github.com/ugo-emekauwa/hyperflex-notification-tool)
 
