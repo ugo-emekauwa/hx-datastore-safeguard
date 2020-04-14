@@ -52,7 +52,7 @@ This tool is intended for use on Cisco HyperFlex systems in demonstration or tra
                                    {"Name": "datastore2", "Size": 21, "SizeUnit": "TB", "BlockSize": 8192})
     ```
     As shown in the preceding examples above, the dictionary for each datastore needs the following keys with values in the specified format:
-    - ```"Name"``` - The datastore name provided as a string value.
+    - `"Name"` - The datastore name provided as a string value.
     - `"Size"` - The datastore capacity size provided as an integer value.
     - `"SizeUnit"` - The datastore capacity size unit provided as a string value. The accepted values are:
         - "TB" for terabytes.
