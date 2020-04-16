@@ -105,6 +105,14 @@ This tool is intended for use on Cisco HyperFlex systems in demonstration or tra
 
     ![Missing Safeguarded Datastores Added](./assets/Missing_Safeguarded_Datastores_Added.png "Missing Safeguarded Datastores Added")
 
+## Notes:
+- If using a task scheduler to run Cisco HyperFlex Datastore Safeguard, a version that has been modified to output to a log file is available in the [**logging-version**](https://github.com/ugo-emekauwa/hx-datastore-safeguard/tree/master/logging-version) folder of this repository as **hx_datastore_safeguard_logging.py**.
+
+    Usage instructions for **hx_datastore_safeguard_logging.py** are the same as **hx_datastore_safeguard.py**, however the log file location needs to be set. To set the log file location, go to the comment section named **Required Variables** and set the value of the variable named `log_file` with the file path location of the log file. The value must be a string. For example, here is an entry that sets the log file location to "c:\Logs\hx_datastore_safeguard_logging.log" on a Windows file system:
+    ```python
+    log_file = "c:\\Logs\\hx_datastore_safeguard_logging.log"
+    ```
+
 ## Related Tools:
 Here are similar tools to help manage Cisco HyperFlex training, demonstration and development environments.
 - [Cisco HyperFlex Datastore Cleanup](https://github.com/ugo-emekauwa/hx-datastore-cleanup)
