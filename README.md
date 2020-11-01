@@ -8,7 +8,7 @@ This tool is intended for use on Cisco HyperFlex systems in demonstration or tra
 
 ## Prerequisites:
 1. Python 3 installed, which can be downloaded from [https://www.python.org/downloads/](https://www.python.org/downloads/).
-2. Clone or download the Cisco HyperFlex Datastore Safeguard repository by using the ![GitHub Clone or download](./assets/GitHub_Clone_or_download_link_button.png "GitHub Clone or download") link on the main repository web page or by running the following command:
+2. Clone or download the Cisco HyperFlex Datastore Safeguard repository by using the ![GitHub Code Button](./assets/GitHub_Code_Button.png "GitHub Code Button") link on the main repository web page or by running the following command:
     ```
     git clone https://github.com/ugo-emekauwa/hx-datastore-safeguard
     ```
@@ -113,10 +113,19 @@ This tool is intended for use on Cisco HyperFlex systems in demonstration or tra
     log_file = "c:\\Logs\\hx_datastore_safeguard_logging.log"
     ```
 
+## Use Cases:
+The Cisco HyperFlex Datastore Safeguard tool is part of the automation solution used to support and maintain the following Cisco Data Center product demonstrations on Cisco dCloud:
+
+1. [_Cisco HyperFlex with Hyper-V v1_](https://dcloud2-rtp.cisco.com/content/instantdemo/cisco-hyperflex-with-hyper-v)
+
+Cisco dCloud is available at [https://dcloud.cisco.com](https://dcloud.cisco.com), where product demonstrations and labs can be found in the Catalog.
+
 ## Related Tools:
 Here are similar tools to help manage Cisco HyperFlex training, demonstration and development environments.
 - [Cisco HyperFlex Datastore Cleanup](https://github.com/ugo-emekauwa/hx-datastore-cleanup)
 - [HyperFlex Notification Tool for Cisco Intersight](https://github.com/ugo-emekauwa/hyperflex-notification-tool)
+- [Cisco HyperFlex API Token Manager](https://github.com/ugo-emekauwa/hx-api-token-manager)
+- [HyperFlex Edge Automated Deployment Tool for Cisco Intersight](https://github.com/ugo-emekauwa/hx-auto-deploy)
 
 ## Author:
 Ugo Emekauwa
